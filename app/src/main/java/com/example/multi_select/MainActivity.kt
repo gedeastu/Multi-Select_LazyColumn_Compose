@@ -49,6 +49,9 @@ fun Main(){
             }
         )
     }
+//    items.filter {
+//        it.isSelected
+//    }
     LazyColumn(modifier = Modifier.fillMaxSize(),content = {
         items(items.size){
             Row(modifier= Modifier
@@ -65,7 +68,7 @@ fun Main(){
                 .padding(16.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically){
                 Text(text = items[it].title)
                 if (items[it].isSelected){
-                    Icon(imageVector = Icons.Default.Check, contentDescription = "Checked", tint = Color.Yellow)
+                    Icon(imageVector = Icons.Default.Check, contentDescription = "Checked", tint = Color.Green)
                 }
             }
         }
